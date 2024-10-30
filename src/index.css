@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*{
+    font-family: 'Nerko One','sans-serif';
+    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    /* color: white; */
+    /* border: 1px solid red; */
+
+
+
+}
+.input-container{
+    background-image: url(./Assets/movie-cam-bg.jpg.webp);
+    min-height: 250px;
+    min-width: 100%;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    /* border: 2px solid red; */
+    
+
+}
+
+.movie-wrapper p, .movie-wrapper h1 , .movie-wrapper h2{
+    font-family: 'Afacad Flux','sans-serif';
+
+}
+.fade{
+
+
+         mask-image: linear-gradient(to left, rgba(0,0,0,1), rgba(0,0,0,0));
+}
+
+.search-options{
+    box-shadow: 1px 1px gray 10px;
+}
