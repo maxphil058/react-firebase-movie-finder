@@ -20,7 +20,7 @@ function Root() {
   const [profileActivePopup,setProfileActivePopup]= useState(false);
   const navigate = useNavigate()
   const [user,loading] = useAuthState(auth)  
-// console.log(user.photoURL)
+
 
 
 

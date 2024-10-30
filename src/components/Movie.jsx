@@ -42,7 +42,7 @@ function Movie() {
 
                 const data = await response.json();
                 setMovieDetails(data)    
-                console.log(data)
+
             } catch (error) {
                 console.log(error)
             }
@@ -58,7 +58,7 @@ function Movie() {
     
                 const data = await response.json();
                 setCrewDetails(data) 
-                // console.log(data)
+
             } catch (error) {
                 console.log(error)
             }

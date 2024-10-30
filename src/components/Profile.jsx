@@ -18,7 +18,6 @@ function Profile() {
 
             const docRef = doc(db, "users" , uid);
             let myDoc = await getDoc( docRef);
-            // console.log(myDoc.data())
             setMyInfo(myDoc.data())
         }
         getMyInfo()
@@ -26,7 +25,7 @@ function Profile() {
     },[uid]) 
 
     useEffect(()=>{
-        console.log("rendered boss")
+
     },[])
 
     const [refresh,setRefresh] = useState(false)

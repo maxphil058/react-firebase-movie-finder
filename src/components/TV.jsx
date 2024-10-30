@@ -27,11 +27,11 @@ function TV() {
             let response = await fetch(`https://api.themoviedb.org/3/tv/${paramID}/videos?api_key=dcf64f9381584cecb483ff727dc95ff7`);
 
             let data = await response.json()
-            console.log(data)
+
             let info = data.results.find((doc,_)=>{ return doc.type === "Trailer" })
             
             setKey(info.key)
-            console.log(info)
+
         }
         getTrailer()
     },[])
@@ -44,7 +44,7 @@ function TV() {
                 const response = await fetch(`https://api.themoviedb.org/3/tv/${paramID}?api_key=dcf64f9381584cecb483ff727dc95ff7&append_to_response=videos,images`)
 
                 const data = await response.json();
-                console.log(data)
+
                 setMovieDetails(data)    
             } catch (error) {
                 console.log(error)
@@ -61,7 +61,7 @@ function TV() {
     
                 const data = await response.json();
                 setCrewDetails(data) 
-                console.log(data)
+
             } catch (error) {
                 console.log(error)
             }
@@ -77,7 +77,7 @@ function TV() {
         let newLink= linkNos?.join("-");
 
         const year = movieDetails?.first_air_date?.slice(0,4);
-        console.log(year)
+
 
             
 

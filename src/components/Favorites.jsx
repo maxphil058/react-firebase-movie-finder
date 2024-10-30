@@ -29,7 +29,6 @@ function Favorites() {
       unsuscribe = onSnapshot(docRef, (doc) => {
         if (doc.exists()) {
 
-          console.log(doc.data())
           let myInfo = (doc.data());
           setMovieIdArr(myInfo.favorites);
         }
@@ -57,10 +56,10 @@ function Favorites() {
           return data;
         }
         
-        console.log("first");
-        console.log(movieIdArr)
+
+
         let obj = await Promise.all(movieIdArr.map(id => getMovieDetails(id)));
-        console.log(obj)
+
         setFavorite(obj);
 
 

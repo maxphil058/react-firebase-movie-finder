@@ -53,7 +53,7 @@ function FavoritesMovies() {
         }
 
         let obj = await Promise.all(movieIdArr.map(id => getMovieDetails(id)));
-        console.log(obj)
+
         setWatchList(obj);
 
       } catch (error) {
@@ -72,53 +72,7 @@ function FavoritesMovies() {
   }
 
 
-//   async function addFavorite(){ 
-        
-//     try {
 
-//         if(!user){
-//             return Swal.fire({
-//             icon: "error",
-//             title: "Login First!",
-          
-//             confirmButtonColor: "black",
-//            }); }
-        
-//         const docRef  = doc(db, "users" , user?.uid )
-//         await updateDoc ( docRef, {
-//             favorites : arrayUnion(`${paramID}`)
-//         } )
-
-
-        
-//     } catch (error) {
-//         console.log(error)
-//     }
-// }
-
-
-// async function addList(){ 
-
-//     try {
-//         if(!user){
-//             return Swal.fire({
-//             icon: "error",
-//             title: "Login First!",
-          
-//             confirmButtonColor: "black",
-//            }); }
-        
-//         const docRef  = doc(db, "users" , user?.uid )
-//         await updateDoc ( docRef, {
-//             watchList : arrayUnion(`${paramID}`)
-//         } )
-
-        
-//     } catch (error) {
-//         console.log(error)
-//     }
-// }
-  
 
 async function remove (id){
   

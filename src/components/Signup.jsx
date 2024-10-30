@@ -25,12 +25,12 @@ function Signup() {
         const userCredential= await signInWithPopup(auth,provider);
         let info = userCredential.user;
         
-        console.log(userCredential)
-        console.log(info)
+
+
 
                     if(userCredential._tokenResponse.isNewUser ){
                         
-                        console.log("New user added");
+
 
                         const docRef = doc(db, "users" , info.uid, )
 
